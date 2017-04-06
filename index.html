@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebSocket PhantomJS test</title>
+    <script type="text/javascript">
+      var wsUri = "wss://echo.websocket.org/";
+
+      function testWebSocket() {
+        websocket = new WebSocket(wsUri);
+        ['open', 'close', 'error'].forEach(function(event) {
+          websocket.addEventListener(event, function(e) {
+            console.log("[WS EVENT: " + event + "] | " + e.data);
+          });
+        });
+
+        websocket.addEventListener('message', function(e) {
+          console.log("[WS MESSAGE RECEIVED] | " + e.data);
+        });
+      }
+
+      window.addEventListener('load', function() {
+        testWebSocket();
+      });
+    </script>
+  </head>
+  <body>
+    <h2>WebSocket PhantomJS test</h2>
+  </body>
+</html>
