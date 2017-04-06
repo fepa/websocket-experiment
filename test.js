@@ -11,7 +11,7 @@ page.onError = function (msg, trace) {
   });
 };
 
-page.open('http://localhost:8000/socket_test.html', function(status) {
+page.open('http://localhost:8000/', function(status) {
   console.log("Page opened. Status: " + status);
 
   window.setTimeout(function () {
