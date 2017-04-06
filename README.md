@@ -15,7 +15,7 @@ OR
 
 ## Run test.js with PhantomJS
 
-`phantomjs script.js`
+`phantomjs test.js`
 
 # Thanks
 
