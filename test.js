@@ -15,7 +15,6 @@ page.open('http://localhost:8000/', function(status) {
   console.log("Page opened. Status: " + status);
 
   window.setTimeout(function () {
-    page.render('example.png');
     page.evaluate(function() {
       websocket.send('Sent from phantomJS');
     });
